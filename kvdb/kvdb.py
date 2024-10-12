@@ -58,7 +58,7 @@ class Collection:
     def query(self) -> "Query[T]": 
         return Query(self)
 
-class Query[T]:
+class Query:
     def __init__(self, collection : Collection):
         self.collection = collection
         self.filters : List[Predicate] = []
